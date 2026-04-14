@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Login/Signin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutor Time - Login</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="Css/login-form.css">
 </head>
 <body>
-    <div>
-        
-    </div>
+
+  <div class="card-container">
+    <a href="index.html" class="close-btn">&times;</a>
     
+    <div class="brand-header">
+      <div class="logo-icon">                
+        <img src="images/logo1.1.jpg" width="50px" height="50px">
+    </div>
+      <h1 class="brand-title">Tutor Time</h1>
+      <p id="auth-subtitle" class="subtitle-text">Welcome back! Please enter your details.</p>
+    </div>
+
+    <div id="login-section" class="form-box">
+      <form onsubmit="event.preventDefault();" >
+        <input type="email" class="input-field" placeholder="Enter email" required>
+        <input type="password" class="input-field" placeholder="Enter password" required>
+        <button class="green-button">Login</button>
+      </form>
+
+      <div class="divider-line">or</div>
+
+      <div class="social-buttons">
+        <button class="social-btn"><img src="images/google.png" alt="" width="25px" height="25px"></button>
+        <button class="social-btn"><img src="images/facebook.png" alt="" width="25px" height="25px"></button>
+      </div>
+
+      <div class="footer-text">
+        Don't have an account? 
+        <span class="link-text" onclick="switchForm('signup')">Sign up</span>
+      </div>
+    </div>
+
+    <div id="signup-section" class="form-box hidden">
+      <form onsubmit="event.preventDefault();">
+        <input type="text" class="input-field" placeholder="Username" required>
+        <input type="email" class="input-field" placeholder="Enter email" required>
+        <input type="password" class="input-field" placeholder="Enter password" required>
+        <button class="green-button">Sign up</button>
+      </form>
+
+      <div class="divider-line">or</div>
+
+      <div class="social-buttons">
+        <button class="social-btn"><img src="images/google.png" alt="" width="25px" height="25px"></button>
+        <button class="social-btn"><img src="images/facebook.png" alt="" width="25px" height="25px"></button>
+      </div>
+
+      <div class="footer-text">
+        Already have an account? 
+        <span class="link-text" onclick="switchForm('login')">Login</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="JavaScript/script.js"></script>
 </body>
 </html>
